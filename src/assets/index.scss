@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  p {
+    margin: 8px 0;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  text-align: center;
+  background-color: rgba(20, 48, 173, 0.877);
+  // background: linear-gradient(to top, rgb(116, 3, 3), rgb(69, 48, 250));
+  min-width: 360px;
+}
+p {
+  color: #fff;
+  font-style: italic;
+  text-shadow: rgba(255, 255, 255, 0.363) 1px 0 10px;
+
+}
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.nav {
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+// Loading 
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgb(28, 140, 155) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// анимация переходов по страницам
+// fade
+.fade-enter-active{
+  transition: 0.8s all 1s;
+} 
+.fade-leave-active {
+  transition: 0.3s all 0.5s;
+}
+.fade-enter, 
+.fade-leave-to {
+  opacity: 0;
+}
+
+// slide-fade
+.slide-fade-enter-active {
+  transition: 0.8s all 0.1s ease;
+}
+.slide-fade-leave-active {
+  transition: 0.3s all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, 
+.slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+
+@media (max-width: 800px) {
+  .max-width-800 {
+    display: none;
+  }
+  .title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 600px) {
+.max-width-600 {
+  display: none;
+}
+.title {
+  font-size: 25px;
+}
+}
